@@ -8,7 +8,7 @@ export default function Header() {
           <a href="#about" className="text-gray-700 hover:text-green-600">About</a>
           <a href="#contact" className="text-gray-700 hover:text-green-600">Contact</a>
           <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
-            Book a Call
+            Book a Consultation
           </button>
         </div>
       </nav>
