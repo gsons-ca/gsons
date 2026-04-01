@@ -51,7 +51,19 @@ const megaMenuContent = {
         ]
       }
     ]
-  }
+  },
+  'IT Consulting ': {
+    subCategories: [
+      {
+        name: 'Defense & Compliance',
+        links: [
+          { title: 'Threat Hunting', desc: 'AI-driven proactive analysis.' },
+          { title: 'IT Audit', desc: 'Comprehensive security reviews.' },
+          { title: 'Endpoint Hardening', desc: 'Securing the edge of your network.' }
+        ]
+      }
+    ]
+  },
 };
 
 export default function Header() {
@@ -80,10 +92,9 @@ export default function Header() {
               {item}
             </button>
           ))}
-          <Link href="/Industries" className="hover:text-[#0f62fe] semi bold ">Industries</Link>
+          <Link href="/Industries" className="hover:text-[#0f62fe] ">Industries</Link>
         </div>
-
-        {/* Right Actions */}
+        <br></br>
         <div className="hidden lg:flex items-center space-x-6 text-sm font-semibold">
           <Link href="/About us" className="text-gray-600 hover:text-gray-900">About us</Link>
           <Link href="/Drivers" className="text-gray-600 hover:text-gray-900">Drivers</Link>
