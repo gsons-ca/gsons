@@ -1,50 +1,61 @@
-import React from 'react';
 import Image from 'next/image';
 
 export default function Hero() {
   return (
-    // CHANGE 1: Switched to a dark background with deep gray padding
-    <section className="bg-black text-white py-20 px-4 md:px-12">
-      
-      {/* Container - Added tight 2-column grid and vertical alignment */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+    // Clean white background with a very subtle slate-50 bottom border
+    <section className="bg-white py-24 md:py-32 px-6 md:px-16 min-h-[80vh] flex items-center border-b border-slate-50">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-20">
         
-        {/* Left Column: Text Content */}
-        <div className="space-y-6">
-          {/* Subheading (e.g., "IT Services") */}
-          <span className="text-gray-400 text-base font-semibold tracking-wider cursor-default">
-            GSONS Solutions
-          </span>
-          
-          {/* Main Heading: Matches large scale and color */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-tight">
-            Excellence in IT Services & Solutions
+        {/* Left Content */}
+        <div className="flex flex-col items-start">
+          {/* Accent text in a sophisticated Teal */}
+          <p className="text-[#005d5d] text-sm font-semibold uppercase tracking-[0.3em] mb-8">
+            Enterprise Solutions
+          </p>
+
+          {/* Heading using a mix of weights for a "custom" look */}
+          <h1 className="text-slate-900 text-6xl md:text-8xl font-light tracking-tighter leading-[1.05] mb-10 uppercase">
+            G-SONS <br />
+            <span className="font-bold text-[#005d5d]">IT SOLUTIONS</span>
           </h1>
-          
-          {/* Paragraph: Muted text color for hierarchy */}
-          <div className="text-lg md:text-xl text-gray-300 font-light space-y-2 max-w-xl">
-            <p>Trusted partner for enterprise-grade IT support.</p>
-            <p>Cloud solutions and digital transformation.</p>
-            <p>Powered by innovation.</p>
+
+          {/* Vertical accent bar in Teal */}
+          <div className="border-l-[1.5px] border-[#005d5d] pl-10 mb-12">
+            <p className="text-slate-600 text-lg md:text-2xl font-light leading-relaxed max-w-md italic">
+              Enhanced Infrastructure. <br />
+              Dynamic Cloud Security. <br />
+              <span className="font-normal text-slate-900 not-italic">Powered by G-SONS.</span>
+            </p>
           </div>
-          
-          {/* CHANGE 3: The NVIDIA Green Button Style */}
-          <button className="bg-[#76b900] text-black text-[15px] font-bold px-7 py-3 rounded-sm hover:bg-[#6ca800] transition-colors uppercase tracking-tight cursor-pointer">
-            Out Now
-          </button>
+
+          {/* Unique sharp-edged CTA buttons */}
+          <div className="flex flex-wrap gap-0"> {/* Gap-0 creates a "joined" look for a unique feel */}
+            <button className="bg-[#005d5d] text-white py-5 px-12 flex items-center gap-6 hover:bg-[#004d4d] transition-all group">
+              Explore Now
+              <span className="text-xl group-hover:translate-x-2 transition-transform">→</span>
+            </button>
+            
+            <button className="bg-slate-900 text-white py-5 px-12 flex items-center gap-6 hover:bg-black transition-all group border-l border-white/10">
+              Contact Us
+              <span className="text-xl group-hover:translate-x-2 transition-transform">→</span>
+            </button>
+          </div>
         </div>
 
-        {/* Right Column: Dynamic Team/Solutions Image */}
-        <div className="flex items-center justify-center md:justify-end">
-          {/* Placeholder div - I've matched the alignment but kept your placeholder style */}
-          <div className="relative group overflow-hidden bg-gray-900 border border-gray-800 aspect-video rounded-md w-full max-w-lg">
-            <div className="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
-              <span className="text-gray-500 font-mono">[Team/Solutions Image]</span>
-            </div>
-            {/* Gradient Accent like the green lines in the reference */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#76b900] to-transparent"></div>
-          </div>
+        {/* Right Content */}
+        <div className="relative w-full aspect-square bg-slate-50 border border-slate-100 overflow-hidden shadow-2xl">
+          <Image 
+            src="/gsons-team.png"
+            alt="G-SONS IT Solutions Team"
+            fill
+            priority
+            className="object-cover mix-blend-multiply opacity-90"
+          />
+          {/* Unique Teal Overlay Accent */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#005d5d]/10 backdrop-blur-3xl -mr-16 -mt-16 rounded-full"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-2 bg-[#005d5d]"></div>
         </div>
+
       </div>
     </section>
   );
