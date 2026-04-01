@@ -91,7 +91,7 @@ export default function Header() {
       <nav className="max-w-350 mx-auto px-6 h-16 flex justify-between items-center">
         
         <div className="flex items-center space-x-8">
-          <Link href="/" className="flex items-center space-x-2 text-green-600 font-black text-2xl tracking-tighter shrink-0">
+          <Link href="/" className="flex items-center space-x-2 text-blue-600 font-black text-2xl tracking-tighter shrink-0">
             G-SONS <span className="hidden sm:inline text-gray-900 font-bold text-xl uppercase tracking-normal">IT Solutions</span>
           </Link>
 
@@ -116,7 +116,7 @@ export default function Header() {
           <Link href="/shop" className="hover:text-green-600">Shop</Link>
           <Link href="/drivers" className="hover:text-green-600">Drivers</Link>
           <Link href="/about" className="hover:text-green-600">Support</Link>
-          <button className="bg-green-600 text-white px-5 py-2 rounded-sm text-sm font-bold hover:bg-green-700 transition-colors">
+          <button className="bg-blue-600 text-white px-5 py-2 rounded-sm text-sm font-bold hover:bg-blue-700 transition-colors">
             BOOK A CALL
           </button>
         </div>
