@@ -39,7 +39,7 @@ export default function Header() {
           ]
         },
         {
-          name: 'Saksham',
+          name: 'IT Consulting',
           links: [
             { title: 'IT Roadmap', desc: 'Strategic planning for the next 5 years.' },
             { title: 'vCISO Services', desc: 'Executive level security leadership.' }
@@ -88,7 +88,7 @@ export default function Header() {
 
   return (
     <header className="relative bg-white border-b border-gray-200 font-sans z-50">
-      <nav className="max-w-[1400px] mx-auto px-6 h-16 flex justify-between items-center">
+      <nav className="max-w-350 mx-auto px-6 h-16 flex justify-between items-center">
         
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center space-x-2 text-green-600 font-black text-2xl tracking-tighter shrink-0">
@@ -185,7 +185,7 @@ export default function Header() {
       <div className="hidden lg:block">
         {activeMenu && (
           <div className="absolute top-16 left-0 w-full bg-white border-b border-gray-300 z-50 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200">
-            <div className="max-w-[1400px] mx-auto flex min-h-[400px]">
+            <div className="max-w-350 mx-auto flex min-h-100">
               <div className="w-64 bg-white border-r border-gray-100 py-6">
                 <ul className="space-y-1">
                   {megaMenuContent[activeMenu].subCategories.map((sub) => (
